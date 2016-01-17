@@ -1,3 +1,10 @@
 language: ruby
 rvm:
-  - 2.3.0
+- 2.3.0
+deploy:
+  provider: heroku
+  api_key:
+    secure: CRzoDFV7hKXUuS6WY7M/ZOOHCl53XMV1xZGcqco27oTJoAIrLPWP3oxJMk5EDDOpkrWsLqdSq90tdCJiI71Ne7hRyQ/8DrHBusZX2PEspF87Mv0wMRWZSDWkM3LoLd4eOxL4izgCH+YZAAOdXOWr1CnBs59Xw2WVwBk1OgmhQIB/2HMhLTSubWhS655dG/6Lu+V8JWL/BxzfgBlS7u5rWEzQttbyQK6zfH4GttZRa0RUOR+9rY/FScnoaQiR61NCTh2RwmdpUmwJKQHDhf59Gdn2ObKoEo/ZQl5jBh1RsA4dClgjAhh6p75BW2rlYo2GnuWnStU4I4UyYHeHRKTN41M/vFH6QrfKOsyizTRCamejqmU9u7VEUefUIGzOZ+2ax8ywIi9sDuLZKJbysUGoe2lHIgivT6JQwKOZnpALqeakOQvDXaqEHzr1JUHoD8r/FZcTsj23yVaKMaYDiptCQCuJGE8yuMj94ejn8zzdUegGUe7r6VTZ1DGN1ye8isdHUOUmzDE0Gx3zrrH42iWMbaUnaqkdnF5hRMYISbiroPkT8iyQ9T4M0gZF2vrp7cSN40v4+VGs4zd/0KKK6FZOpdOdpKV0MLglzSHnVsoWgf2BobxRIsPG3QKz4VJfaYVRbBxReuMGptv1y9EM+RPcdGqTs4/koGsJb2CUm/i7gBw=
+  app: wtfismybbctbqtopic
+  on:
+    repo: pikesley/wtfismybbctbqtopic
