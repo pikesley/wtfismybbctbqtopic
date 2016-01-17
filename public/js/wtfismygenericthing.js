@@ -41,5 +41,5 @@ function populateTemplate(template, json) {
 }
 
 function template(json) {
-  return populateTemplate(getRandom(json['templates']), json)
+  return populateTemplate(getRandom(json['templates']), json) + '?'
 }
