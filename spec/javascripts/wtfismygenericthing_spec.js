@@ -86,7 +86,7 @@ describe('Nested Templates', function() {
     ]
   }
   it('fills a template recursively', function() {
-    expect(template(json)).toEqual('Throw angry bears at libertarians')
+    expect(template(json)).toEqual('Throw angry bears at libertarians?')
   })
 
   describe('Deeply-nested Templates', function() {
@@ -112,7 +112,7 @@ describe('Nested Templates', function() {
     }
 
     it('fills a template recursively', function() {
-      expect(template(json)).toEqual('pivot disruptors into the Sun with extreme prejudice')
+      expect(template(json)).toEqual('pivot disruptors into the Sun with extreme prejudice?')
     })
   })
 })
