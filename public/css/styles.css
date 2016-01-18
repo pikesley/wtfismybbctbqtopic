@@ -2,11 +2,11 @@
   font-size: 2.2em;
 }
 
-#strategy {
+#topic {
   font-size: 1.7em;
 }
 
-#title, #strategy, #generate {
+#title, #topic, #generate {
   margin-top: 40px;
 }
 
@@ -15,7 +15,7 @@
   right: 10px;
 }
 
-#title, #strategy, #generate {
+#title, #topic, #generate {
   text-transform: uppercase;
 }
 
