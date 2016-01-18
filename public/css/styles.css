@@ -2,11 +2,11 @@
   font-size: 2.2em;
 }
 
-#thing {
+#topic {
   font-size: 1.7em;
 }
 
-#title, #thing, #generate {
+#title, #topic, #generate {
   margin-top: 40px;
 }
 
@@ -15,7 +15,7 @@
   right: 10px;
 }
 
-#title, #thing, #generate {
+#title, #topic, #generate {
   text-transform: uppercase;
 }
 
@@ -38,7 +38,7 @@ body {
   color: #333;
   border-top: solid 1px #ccc;
 
-  padding: 15px;
+  padding: 5px;
 }
 
 .footer a {
