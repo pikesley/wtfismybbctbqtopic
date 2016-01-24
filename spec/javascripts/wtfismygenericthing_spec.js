@@ -56,15 +56,6 @@ describe('Templates', function() {
     ]
   }
 
-  describe('replace', function() {
-    it('replaces a placeholder', function() {
-      expect(substitute('@things', json)).toEqual('cats')
-    })
-    it('ignores a non-placeholder', function() {
-      expect(substitute('plain', json)).toEqual('plain')
-    })
-  })
-
   describe('populateTemplate', function() {
     var template = 'Put @things into @stuff'
     it('fills a simple template', function() {
@@ -89,7 +80,7 @@ describe('Nested Templates', function() {
     ]
   }
   it('fills a template recursively', function() {
-    expect(template(json)).toEqual('Throw angry bears, at libertarians?')
+    expect(template(json)).toEqual('Throw angry bears, at libertarians')
   })
 
   describe('Deeply-nested Templates', function() {
@@ -115,7 +106,7 @@ describe('Nested Templates', function() {
     }
 
     it('fills a template recursively', function() {
-      expect(template(json)).toEqual('pivot disruptors into the Sun, with extreme prejudice?')
+      expect(template(json)).toEqual('pivot disruptors into the Sun, with extreme prejudice')
     })
   })
 })

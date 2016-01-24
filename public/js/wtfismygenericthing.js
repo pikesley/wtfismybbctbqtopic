@@ -1,3 +1,13 @@
+function extract(list) {
+  var index = Math.floor(Math.random() * list.length)
+  a = {}
+  a['victim'] = list[index]
+  list.splice(index, 1)
+  a['remainder'] = list
+
+  return(a)
+}
+
 function isLetter(char) {
   return('abcdefghijklmnopqrstuvwxyz@'.indexOf(char.toLowerCase()) > -1)
 }
@@ -56,18 +66,20 @@ function chunks(string) {
   return separate(string)
 }
 
-function substitute(chunk, json) {
-  if(isPlaceholder(chunk)) {
-    return getRandom(json[stripFirst(chunk)])
-  } else {
-    return chunk
-  }
-}
-
 function populateTemplate(template, json) {
   var populated = []
   $.each(chunks(template), function(index, chunk) {
-    populated.push(substitute(chunk, json))
+
+    subs = ''
+    if(isPlaceholder(chunk)) {
+      extracted = extract(json[stripFirst(chunk)])
+      subs = extracted['victim']
+      json[chunk] = extracted['remainder']
+    } else {
+      subs = chunk
+    }
+    populated.push(subs)
+
   })
   complete = populated.join('')
 
@@ -79,5 +91,11 @@ function populateTemplate(template, json) {
 }
 
 function template(json) {
-  return populateTemplate(getRandom(json['templates']), json) + '?'
+  return populateTemplate(getRandom(json['templates']), json)
+}
+
+function populate(json) {
+  $('#title').text(getRandom(json['headings']))
+  $('#thing').text(template(json))
+  $('#generate').text(getRandom(json['responses']))
 }
